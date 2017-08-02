@@ -44,23 +44,22 @@ class PromptView {
         
         let textSize = label.intrinsicContentSize
         let labelSize = CGSize(width: textSize.width + 20.0, height: textSize.height + 5.0)
-        print("text rect is \(textSize)")
         
         label.frame = CGRect(origin: CGPoint.zero, size: labelSize)
         label.center = centerPoint!
         
         UIView.animateKeyframes(withDuration: duration!, delay: 0, options: .calculationModeCubic, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/7, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/10, animations: {
                 if let maxAlpha = maxAlpha {
                     label.alpha = maxAlpha
                 } else {
                     label.alpha = 1.0
                 }
             })
-            UIView.addKeyframe(withRelativeStartTime: 1/7, relativeDuration: 5/5, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 1/10, relativeDuration: 8/10, animations: {
                 
             })
-            UIView.addKeyframe(withRelativeStartTime: 6/7, relativeDuration: 1/7, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 9/10, relativeDuration: 1/10, animations: {
                 label.alpha = 0.0
             })
         }) { (finished) in
